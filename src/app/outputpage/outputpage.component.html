@@ -1,0 +1,63 @@
+
+<div class="card text-center">
+    <div class="header">
+        <p style="color: white;">Our System will generate below for you based on your requirments
+      </div>
+</div>
+
+
+<div class="card text-center" *ngIf="editableData">
+    <div class="card-header">
+        <h6 style="color:#3399ff"> Savings of <b style="color: green;">${{ editableData.salary }}</b> after retirement age <b style="color: green;">{{ editableData.age }}</b>&nbsp;
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                (click)="openEditModel()"><i class="fas fa-edit"></i></button>
+        </h6>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+       <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h3 class="modal-title fs-5" id="staticBackdropLabel">Check the Details</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div *ngIf="showEditModel">
+                        <label for="fname">Enter Your Age &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; </label>
+                        <input type="text" class="text" [(ngModel)]="editAge" placeholder="Enter your age" /><br><br>
+                        &nbsp;&nbsp;&nbsp;<label for="fname">Enter Your Salary: &nbsp;</label>
+                        <input type="text" class="text" [(ngModel)]="editSalary" placeholder="Enter your salary" />
+                   </div>
+                </div>
+                <div class="modal-footer">
+                   
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        (click)="updateData()">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="image-container">
+               <img src="../assets/graph2.png" alt="Your Image" />
+            </div>
+           </div>
+    </div>
+    <br>
+    <div class="text-container">
+        <h4>Projected gap:$ 480/MO </h4>
+        <h6><b>Your Salary:</b> {{ editableData.salary | currency }} </h6>
+        <h6><b>Age:</b> {{ editableData.age }}</h6>
+        <h6>Project Retirement Savings Income : $2704/MO</h6><br>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary mr-4">Create New Account</button>&nbsp;&nbsp;
+            <button class="btn btn-success">Existing Account</button>
+            </div>
+    </div>
+<br>
+<br>
+    <div class="footer">
+       <p style="color: white; font-size: 65%;"> © Copyright- All rights are reserved.</p>
+      </div>

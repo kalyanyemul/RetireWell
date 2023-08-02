@@ -1,0 +1,42 @@
+
+<div class="violet-background">
+    <br>
+    <div class="card-header">
+        <marquee><h2 style="color: aliceblue;"><i>Please share your thoughts below and check your plans</i></h2></marquee>
+    </div>
+    <br>
+
+    <div class="bg-image">
+        <img src="../assets/input1.png" alt="">
+    </div>
+<br>
+<br>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Tell us about your thoughts on retirement life..." [(ngModel)]="userInput"></textarea><br>
+                <div>
+                    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+                        <!-- form fields go here -->
+                        <button class="btn btn-success" type="submit" [disabled]="isLoading" >Continue</button>
+                        <div *ngIf="isLoading" class="loading-spinner">
+                            <!-- Add your loading spinner or progress bar component here -->
+                            <div class="container">
+                                <img src="../assets/r3.gif">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br><br><br><br><br><br>
+    <!-- <footer class="dark-blue-footer">
+
+        Your footer content here
+      
+        <h6>&copy; 2023 RetireSmart. All rights reserved.</h6>
+      
+        </footer> -->

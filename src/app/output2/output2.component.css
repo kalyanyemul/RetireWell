@@ -1,0 +1,42 @@
+.violet-background {
+    display: block;
+    /* background-color: #512DA8; */
+    background-image: linear-gradient(to bottom, #0f6a31, #194b81);
+    height: 100vh;
+    width: 100vw;
+}
+
+ 
+
+ .bg-image img{
+
+    height:400px;
+    max-width:100%;
+}
+
+.loading-spinner img {
+
+    display: flex;
+
+    height: 150px;
+    margin-left: 30%;
+}
+
+
+
+
+.container img {
+
+    align-items: center;
+}
+.dark-blue-footer {
+
+    background-color: darkblue;
+  
+    color: #fff; /* White text color */
+  
+    padding: 20px; /* Adjust the padding to your preference */
+  
+    text-align: center;
+  
+   }
